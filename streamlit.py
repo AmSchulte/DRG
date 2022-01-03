@@ -7,8 +7,8 @@ from skimage import exposure
 from skimage.color import hsv2rgb
 
 
-d7 = r'F:\Deep Learning\Daten zum Auswerten\Ratten d7\Data_tif'    
-d14 = r'F:\Deep Learning\Daten zum Auswerten\Ratten d14\Data_tif_downscale'
+d7 = r'E:\Deep Learning\Daten zum Auswerten\Ratten d7\Data_tif'    
+d14 = r'E:\Deep Learning\Daten zum Auswerten\Ratten d14\Data_tif_downscale'
 
 condition = st.sidebar.selectbox('Condition', ["SNI", "Sham"])
 
@@ -45,7 +45,7 @@ st.header(image_type)
 img = plt.imread(img_path)[::2, ::2]
 mask = plt.imread(mask_path)[::2, ::2]
 
-left, right = st.sidebar.beta_columns(2)
+left, right = st.sidebar.columns(2)
 show_mask = left.checkbox("Mask")
 show_separate_mask = right.checkbox("separate mask")
 
