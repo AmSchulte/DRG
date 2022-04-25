@@ -60,12 +60,14 @@ if rat == 1 and time == '7 days':
     mask_template[..., 0] = 0.5
     mask_final = hsv2rgb(mask_template)
 
+    width = (img.shape[0]/600)*img.shape[1]
+
     if show_mask:
-        st.image(image=mask_final, width=500)
+        st.image(image=mask_final, width=width)
     elif show_separate_mask:
-        st.image(image=mask, width=500)
+        st.image(image=mask, width=width)
     else:
-        st.image(image=img, width=500)
+        st.image(image=img, width=width)
 
 
 
@@ -82,6 +84,6 @@ if rat == 1 and time == '7 days':
     For visual purposes, original images were normalized by the min-max values of the respective image
     '''
 else:
-    st.write("Data not shown.\n For full dataset, see: ")
+    st.subheader("Data not shown. For full dataset, see: ")
 
 
