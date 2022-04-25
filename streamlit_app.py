@@ -8,6 +8,12 @@ from skimage.color import hsv2rgb
 d7 = '/examples/rats d7'    
 d14 = '/examples/rats d14'
 
+from pathlib import Path
+
+path = Path(__file__).parents[1] / 'NF/0001.tif'
+
+print(path)
+
 condition = st.sidebar.selectbox('Condition', ["SNI", "sham"])
 
 time = st.sidebar.selectbox('Days after OP', ["7 days", "14 days"])
