@@ -14,7 +14,7 @@ drg_position = st.sidebar.selectbox('DRG position', ["L4IL", "L4CL", "L5IL", "L5
 image_type = st.sidebar.selectbox('Staining', ["NF", "GS", "GFAP"])
 
 
-image_folder_path = os.path.join(path, condition, "rat "+str(rat), drg_position, image_type)
+image_folder_path = os.path.join(path, condition, "rat 1", drg_position, image_type)
 filenames = os.listdir(image_folder_path)
 
 image_number = st.sidebar.slider('Image number', min_value=1, value=1, max_value=len(filenames))
