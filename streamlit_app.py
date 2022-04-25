@@ -5,23 +5,13 @@ import numpy as np
 from skimage.color import hsv2rgb
 
 
-d7 = '/app/drg/examples/rats d7'    
-d14 = '/app/drg/examples/rats d14'
+path = '/app/drg/examples/rats d7'    
 
 condition = st.sidebar.selectbox('Condition', ["SNI", "sham"])
 
 
 drg_position = st.sidebar.selectbox('DRG position', ["L4IL", "L4CL", "L5IL", "L5CL"])
 image_type = st.sidebar.selectbox('Staining', ["NF", "GS", "GFAP"])
-
-#test = st.sidebar.button('test')
-
-if time == '7 days':
-    path = d7
-elif time == '14 days':
-    path = d14
-else:
-    path = d7
 
 
 image_folder_path = os.path.join(path, condition, "rat "+str(rat), drg_position, image_type)
