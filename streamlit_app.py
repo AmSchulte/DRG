@@ -5,8 +5,8 @@ import numpy as np
 from skimage.color import hsv2rgb
 
 
-d7 = '/examples/rats d7'    
-d14 = '/examples/rats d14'
+d7 = '/app/drg/examples/rats d7'    
+d14 = '/app/drg/examples/rats d14'
 
 from pathlib import Path
 
