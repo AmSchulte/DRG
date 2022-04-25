@@ -83,5 +83,5 @@ if rat == 1 and time == '7 days':
     '''
 else:
     st.write("Data not shown.\n For full dataset, see: ")
-    '''
+
 
