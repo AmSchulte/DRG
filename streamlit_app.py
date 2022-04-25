@@ -60,7 +60,7 @@ if rat == 1 and time == '7 days':
     mask_template[..., 0] = 0.5
     mask_final = hsv2rgb(mask_template)
 
-    width = (img.shape[0]/600)*img.shape[1]
+    width = round((img.shape[0]/600)*img.shape[1])
 
     if show_mask:
         st.image(image=mask_final, width=width)
