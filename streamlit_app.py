@@ -56,7 +56,7 @@ else:
     st.image(image=img, width=width)
 
 '''
-Data are is from one exemplary rat 7 days after sham or SNI. 
+Images are from one exemplary rat 7 days after sham or SNI. 
 Full dataset is available at: 
 '''
 
