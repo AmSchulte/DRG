@@ -8,12 +8,6 @@ from skimage.color import hsv2rgb
 d7 = '/app/drg/examples/rats d7'    
 d14 = '/app/drg/examples/rats d14'
 
-from pathlib import Path
-
-path = Path('NF/0001.tif')
-
-st.title(path.parent.absolute())
-
 condition = st.sidebar.selectbox('Condition', ["SNI", "sham"])
 
 time = st.sidebar.selectbox('Days after OP', ["7 days", "14 days"])
@@ -42,7 +36,7 @@ img_path = os.path.join(image_folder_path, '{0:04d}'.format(image_number)+'.tif'
 mask_folder_path = image_folder_path + '_pred/masks'
 mask_path = os.path.join(mask_folder_path, '{0:04d}'.format(image_number)+'.png')
 
-#st.title('rat DRG image segmentation')
+st.title('rat DRG image segmentation')
 
 st.header(image_type)
 
