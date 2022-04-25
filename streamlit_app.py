@@ -27,7 +27,7 @@ elif time == '14 days':
 else:
     path = d7
 
-if rat == 1:
+if rat == 1 and time == '7 days':
     image_folder_path = os.path.join(path, condition, "rat "+str(rat), drg_position, image_type)
     filenames = os.listdir(image_folder_path)
 
@@ -65,7 +65,7 @@ if rat == 1:
     elif show_separate_mask:
         st.image(image=mask)
     else:
-        st.image(image=img)
+        st.image(image=img, width=200)
 
 
 
@@ -82,4 +82,8 @@ if rat == 1:
     For visual purposes, original images were normalized by the min-max values of the respective image
     '''
 else:
-    st.header('Images not provided in example dataset')
+    '''
+    Data not shown. 
+    For full dataset, see: 
+    '''
+
