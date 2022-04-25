@@ -12,7 +12,7 @@ from pathlib import Path
 
 path = Path('NF/0001.tif')
 
-print(path.parent.absolute())
+st.title(path.parent.absolute())
 
 condition = st.sidebar.selectbox('Condition', ["SNI", "sham"])
 
@@ -42,7 +42,7 @@ img_path = os.path.join(image_folder_path, '{0:04d}'.format(image_number)+'.tif'
 mask_folder_path = image_folder_path + '_pred\masks'
 mask_path = os.path.join(mask_folder_path, '{0:04d}'.format(image_number)+'.png')
 
-st.title('rat DRG image segmentation')
+#st.title('rat DRG image segmentation')
 
 st.header(image_type)
 
