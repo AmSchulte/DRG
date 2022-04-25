@@ -1,4 +1,3 @@
 matplotlib
-os-sys
 numpy
 scikit-image
