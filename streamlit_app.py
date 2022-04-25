@@ -39,7 +39,7 @@ filenames = os.listdir(image_folder_path)
 image_number = st.sidebar.slider('Image number', min_value=1, value=1, max_value=len(filenames))
 
 img_path = os.path.join(image_folder_path, '{0:04d}'.format(image_number)+'.tif') 
-mask_folder_path = image_folder_path + '_pred\masks'
+mask_folder_path = image_folder_path + '_pred/masks'
 mask_path = os.path.join(mask_folder_path, '{0:04d}'.format(image_number)+'.png')
 
 #st.title('rat DRG image segmentation')
