@@ -10,9 +10,9 @@ d14 = '/examples/rats d14'
 
 from pathlib import Path
 
-path = Path(__file__).parents[1] / 'NF/0001.tif'
+path = Path('NF/0001.tif')
 
-print(path)
+print(path.parent.absolute())
 
 condition = st.sidebar.selectbox('Condition', ["SNI", "sham"])
 
