@@ -1,14 +1,12 @@
-from sys import platform
 import streamlit as st
 import matplotlib.pyplot as plt
 import os
 import numpy as np
-from skimage import exposure
 from skimage.color import hsv2rgb
 
 
-d7 = r'E:\Deep Learning\Daten zum Auswerten\Ratten d7\Data_tif'    
-d14 = r'E:\Deep Learning\Daten zum Auswerten\Ratten d14\Data_tif_downscale'
+d7 = r'G:\DRG Segmentationpaper Backup\Deep Learning\Daten zum Auswerten\Ratten d7\Data_tif'    
+d14 = r'G:\DRG Segmentationpaper Backup\Deep Learning\Daten zum Auswerten\Ratten d14\Data_tif_downscale'
 
 condition = st.sidebar.selectbox('Condition', ["SNI", "Sham"])
 
@@ -38,7 +36,7 @@ img_path = os.path.join(image_folder_path, '{0:04d}'.format(image_number)+'.tif'
 mask_folder_path = image_folder_path + '_pred\masks'
 mask_path = os.path.join(mask_folder_path, '{0:04d}'.format(image_number)+'.png')
 
-st.title('DRG image segmentation')
+st.title('rat DRG image segmentation')
 
 st.header(image_type)
 
