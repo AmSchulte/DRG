@@ -27,7 +27,7 @@ st.title('rat DRG image segmentation')
 
 st.header(image_type)
 
-@st.cache(suppress_st_warning=True)
+
 img = plt.imread(img_path)[::2, ::2]
 mask = plt.imread(mask_path)[::2, ::2]
 
@@ -38,16 +38,23 @@ show_separate_mask = right.checkbox("separate mask")
 
 gain = st.sidebar.slider('Gain', 0.0, 3.0, 1.0)
 bias = st.sidebar.slider('Bias (brightness)', 0.0, 0.5, 0.1)
-img = (img  - np.min(img ))/np.ptp(img )
-img = np.clip(img * gain + bias, 0, 1)
 
-mask_template = np.zeros([img.shape[0], img.shape[1], 3])
-mask_template[..., 2] = img
-mask_template[..., 1] = mask/2
-mask_template[..., 0] = 0.5
-mask_final = hsv2rgb(mask_template)
+@st.cache(suppress_st_warning=True)
+def scale_images(img, mask):
+    img = (img  - np.min(img ))/np.ptp(img )
+    img = np.clip(img * gain + bias, 0, 1)
+
+    mask_template = np.zeros([img.shape[0], img.shape[1], 3])
+    mask_template[..., 2] = img
+    mask_template[..., 1] = mask/2
+    mask_template[..., 0] = 0.5
+    mask_final = hsv2rgb(mask_template)
+    return img, mask_final
+
+img, mask_final = scale_images(img, mask)
 
 width = round((600/img.shape[0])*img.shape[1])
+
 
 if show_mask:
     st.image(image=mask_final, width=width)
@@ -58,7 +65,7 @@ else:
 
 '''
 Images are from one exemplary rat 7 days after sham or SNI. 
-The full dataset is available at: 
+The full dataset is available at: https://doi.org/10.5281/zenodo.6487423
 '''
 
 '''
