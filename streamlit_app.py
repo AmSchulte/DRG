@@ -27,9 +27,13 @@ st.title('rat DRG image segmentation')
 
 st.header(image_type)
 
+@st.cache(suppress_st_warning=True)
+def read_images(img_path, mask_path):
+    img = plt.imread(img_path)[::2, ::2]
+    mask = plt.imread(mask_path)[::2, ::2]
+    return img, mask
 
-img = plt.imread(img_path)[::2, ::2]
-mask = plt.imread(mask_path)[::2, ::2]
+img, mask = read_images(img_path, mask_path)
 
 left, right = st.sidebar.columns(2)
 show_mask = left.checkbox("Mask")
