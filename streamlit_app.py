@@ -27,6 +27,7 @@ st.title('rat DRG image segmentation')
 
 st.header(image_type)
 
+@st.cache(suppress_st_warning=True)
 img = plt.imread(img_path)[::2, ::2]
 mask = plt.imread(mask_path)[::2, ::2]
 
@@ -57,7 +58,7 @@ else:
 
 '''
 Images are from one exemplary rat 7 days after sham or SNI. 
-Full dataset is available at: 
+The full dataset is available at: 
 '''
 
 '''
