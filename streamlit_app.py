@@ -39,6 +39,9 @@ left, right = st.sidebar.columns(2)
 show_mask = left.checkbox("Mask")
 show_separate_mask = right.checkbox("separate mask")
 
+if show_separate_mask:
+    show_mask = False
+
 
 gain = st.sidebar.slider('Gain', 0.0, 3.0, 1.0)
 bias = st.sidebar.slider('Bias (brightness)', 0.0, 0.5, 0.1)
