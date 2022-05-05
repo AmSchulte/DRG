@@ -5,16 +5,16 @@ import numpy as np
 from skimage.color import hsv2rgb
 
 
-d7 = r'G:\DRG Segmentationpaper Backup\Deep Learning\Daten zum Auswerten\Ratten d7\Data_tif'    
-d14 = r'G:\DRG Segmentationpaper Backup\Deep Learning\Daten zum Auswerten\Ratten d14\Data_tif_downscale'
+d7 = r'G:\DRG Segmentationpaper Backup\Deep Learning\Daten zum Auswerten\rat DRG\rats d7'    
+d14 = r'G:\DRG Segmentationpaper Backup\Deep Learning\Daten zum Auswerten\rat DRG\rats d14'
 
-condition = st.sidebar.selectbox('Condition', ["SNI", "Sham"])
+condition = st.sidebar.selectbox('Condition', ["SNI", "sham"])
 
 time = st.sidebar.selectbox('Days after OP', ["7 days", "14 days"])
 
-rats = 5 if condition == "Sham" and time == '14 days' else 6
+rats = 5 if condition == "sham" and time == '14 days' else 6
 
-rat = st.sidebar.slider('Rat number', min_value=1, value=1, max_value=rats)
+rat = st.sidebar.slider('rat', min_value=1, value=1, max_value=rats)
 drg_position = st.sidebar.selectbox('DRG position', ["L4IL", "L4CL", "L5IL", "L5CL"])
 image_type = st.sidebar.selectbox('Staining', ["NF", "GS", "GFAP"])
 
@@ -22,12 +22,14 @@ image_type = st.sidebar.selectbox('Staining', ["NF", "GS", "GFAP"])
 
 if time == '7 days':
     path = d7
+    time_op = 'd7'
 elif time == '14 days':
     path = d14
+    time_op = 'd14'
 else:
     path = d7
 
-image_folder_path = os.path.join(path, condition, "Ratte "+str(rat), drg_position, image_type)
+image_folder_path = os.path.join(path, condition, condition+"_"+time_op+"_rat"+str(rat), drg_position, image_type)
 filenames = os.listdir(image_folder_path)
 
 image_number = st.sidebar.slider('Image number', min_value=1, value=1, max_value=len(filenames))
