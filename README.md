@@ -8,10 +8,10 @@ Online, example segementation can be viewed at https://share.streamlit.io/amschu
 The app (streamlit_app.py) is lauched over Streamlit, visualized data is uploaded on github.
 
 Analysis steps:
-1. Calculatation of features for each image:
+1. Calculation of parameters for each image:
    - class with calculation script and functions: DrgData in drg.py
    - execution in Jupyter notebook (Pipeline_DRG_results.ipynb)
-   - for each image set (NF, NF_mask, GS, GS_mask, GFAP, GFAP_mask), a dictionary containing the analysis group (L4CL/L4IL/L5CL/L5IL), path, and features is created
+   - for each image set (NF, NF_mask, GS, GS_mask, GFAP, GFAP_mask), a dictionary containing the analysis group (L4CL/L4IL/L5CL/L5IL), path, and parameters is created
    - for each experiment group, a list of dictionaries with the analysis results is saved in a json file (D7_Sham_area.json, D7_SNI_area.json, D14_Sham_area.json, D14_SNI_area.results.json)
    - rationale: computation of results for each experiment group took about 4h, making it necessarry to save intermediate results before final evaluation and visualization 
 2. Calculation of parameters for each DRG:
@@ -19,8 +19,10 @@ Analysis steps:
    - calculation of final parameters, averated for each DRG
    - used before visulation and calculation of statistics
 3. Visualization:
-   - Boxplots: Boxplots_d7+d14.ipynb (used in Paper), Boxplots_d7.ipynb, Boxplots_d14.ipynb, Boxplots_L4+L5_d7.ipynb (in Supplements), Boxplots_L4+L5_d14.ipynb (in Supplements)
-   - Histogramms: Histogramm_neurons_d7.ipynb (in Figure 5), Histogramm_neurons_d14.ipynb (in Figure 5)
+   - Boxplots: Boxplots_d7+d14.ipynb, Boxplots_d7.ipynb, Boxplots_d14.ipynb, Boxplots_L4+L5_d7.ipynb, Boxplots_L4+L5_d14.ipynb 
+   - Histogramms: Histogramm_neurons_d7.ipynb, Histogramm_neurons_d14.ipynb 
 4. Statistics:
    - in Statistic.ipynb
    - saved as an excel file
+
+![alt text] (analysis_graph.png)
