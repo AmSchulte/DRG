@@ -1,3 +1,13 @@
 matplotlib
 numpy
 scikit-image
+os
+streamlit
+scipy
+sklearn
+tqdm
+json
+cv2
+pandas
+seaborn
+scikit_posthocs

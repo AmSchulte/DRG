@@ -7,13 +7,13 @@ from skimage import segmentation
 from sklearn.preprocessing import RobustScaler
 from scipy import misc,ndimage
 from tqdm.auto import tqdm
-import pandas as pd
 from skimage.morphology import binary_dilation, binary_erosion, disk, remove_small_holes
 from skimage.filters import threshold_li, gaussian
 
 
 class DrgData:
     def __init__(self, subdir):
+        # matching file directories for each marker
         nf_path = os.path.join(subdir, 'NF')
         nf_mask_path = os.path.join(subdir, 'NF_pred\masks')
         gs_path = os.path.join(subdir, 'GS')
@@ -21,8 +21,10 @@ class DrgData:
         gfap_path = os.path.join(subdir, 'GFAP')
         gfap_mask_path = os.path.join(subdir, 'GFAP_pred\masks')
 
+        # smallest annotated roi of NF images
         self.smallest_roi = self.get_smallest_roi()
 
+        # features to be calculated
         self.neuronal_cell_sizes = []
         self.neuronal_area_per_tissue = []
         self.gs_intensities = []
