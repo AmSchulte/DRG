@@ -25,4 +25,4 @@ Analysis steps:
    - in Statistic.ipynb
    - saved as an excel file
 
-![alt text] (analysis_graph.png)
+![plot] (./analysis_graph.png)
