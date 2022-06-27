@@ -1,6 +1,7 @@
 # DRG analysis
 DRG Segmentation Analysis of the DRGs of rats 7 days and 14 days after SNI
 
+<a href="url"><img src="https://github.com/AmSchulte/DRG/blob/main/analysis_graph.png" align="left" height="48" width="48" ></a>
 [[https://github.com/AmSchulte/DRG/blob/main/analysis_graph.png|width=400px]]
 
 
