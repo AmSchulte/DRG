@@ -1,5 +1,8 @@
-# DRG
+# DRG analysis
 DRG Segmentation Analysis of the DRGs of rats 7 days and 14 days after SNI
+
+![alt tag](https://github.com/AmSchulte/DRG/blob/main/analysis_graph.png)
+
 
 Segmentations of images (tif) were previously prediceted with deepflash2 and saved as png files.
 All data, including image annotations used for training of deep learning models, is available at https://doi.org/10.5281/zenodo.6546069.
@@ -25,4 +28,3 @@ Analysis steps:
    - in Statistic.ipynb
    - saved as an excel file
 
-![alt tag](https://github.com/AmSchulte/DRG/blob/main/analysis_graph.png)
