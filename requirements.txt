@@ -1,7 +1,6 @@
 matplotlib
 numpy
 scikit-image
-os
 streamlit
 scipy
 sklearn
