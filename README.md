@@ -25,4 +25,4 @@ Analysis steps:
    - in Statistic.ipynb
    - saved as an excel file
 
-![alt tag] (https://github.com/AmSchulte/DRG/blob/main/analysis_graph.png)
+![alt tag](https://github.com/AmSchulte/DRG/blob/main/analysis_graph.png)
