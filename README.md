@@ -1,7 +1,7 @@
 # Bioimage analysis of cellular changes in rat DRG after SNI
 Outline of analysis steps
 
-<a href="url"><img src="https://github.com/AmSchulte/DRG/blob/main/analysis_graph.png" height="600" width="600" ></a>
+<a href="url"><img src="https://github.com/AmSchulte/DRG/blob/main/analysis_graph.png" width="600" ></a>
 
 
 Segmentations of images (tif) were previously prediceted with deepflash2 and saved as png files.
@@ -33,4 +33,4 @@ Analysis steps:
 
 Structure of bioimage analysis of rat DRG
 
-<a href="url"><img src="https://github.com/AmSchulte/DRG/blob/main/analysis_details_graph.png" height="600" width="600" ></a>
+<a href="url"><img src="https://github.com/AmSchulte/DRG/blob/main/analysis_details_graph.png" width="600" ></a>
