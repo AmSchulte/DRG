@@ -1,5 +1,5 @@
-# Bioimage analysis of cellular changes in rat DRG after SNI
-### Outline of analysis steps
+## Bioimage analysis of cellular changes in rat DRG after SNI
+### Outline of analysis steps:
 <a href="url"><img src="https://github.com/AmSchulte/DRG/blob/main/analysis_graph.png" width="600" ></a>
 
 
@@ -30,5 +30,6 @@ Analysis steps:
    - saved as an excel file
 
 
+
 ### Structure of bioimage analysis of rat DRG:
-<a href="url"><img src="https://github.com/AmSchulte/DRG/blob/main/analysis_details_graph.png" width="600" ></a>
+<a href="url"><img src="https://github.com/AmSchulte/DRG/blob/main/analysis_details_graph.png" width="800" ></a>
