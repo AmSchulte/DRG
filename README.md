@@ -1,4 +1,8 @@
 ## Bioimage analysis of cellular changes in rat DRG after SNI
+This repository contains the Python implementation for analyzing DRG tile scan images, as described in the paper:
+
+PAIN paper
+
 ### Outline of analysis steps:
 <a href="url"><img src="https://github.com/AmSchulte/DRG/blob/main/analysis_graph.png" width="600" ></a>
 
