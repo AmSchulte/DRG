@@ -62,6 +62,7 @@ class GroupData:
                 if self.drg_position in drg['group'] and rat in self.experiment_group[i]['path']:
                     self.get_numbers_for_each_image(drg)
 
+    # actually, it is mean values for each DRG
     def get_numbers_for_each_image(self, drg):
         gfap_overlap = []
         gs_overlap = []

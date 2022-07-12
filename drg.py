@@ -13,7 +13,7 @@ from skimage.filters import threshold_li, gaussian
 
 class DrgData:
     def __init__(self, subdir):
-        # matching file directories for each marker
+        # match file directories for each marker
         nf_path = os.path.join(subdir, 'NF')
         nf_mask_path = os.path.join(subdir, 'NF_pred\masks')
         gs_path = os.path.join(subdir, 'GS')
