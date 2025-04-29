@@ -27,7 +27,7 @@ st.title('rat DRG image segmentation')
 
 st.header(image_type)
 
-@st.cache(suppress_st_warning=True)
+@st.cache_data(suppress_st_warning=True)
 def read_images(img_path, mask_path):
     img = plt.imread(img_path)[::2, ::2]
     mask = plt.imread(mask_path)[::2, ::2]
@@ -46,7 +46,7 @@ if show_separate_mask:
 gain = st.sidebar.slider('Gain', 0.0, 3.0, 1.0)
 bias = st.sidebar.slider('Bias (brightness)', 0.0, 0.5, 0.1)
 
-@st.cache(suppress_st_warning=True)
+@st.cache_data(suppress_st_warning=True)
 def scale_images(img, mask):
     img = (img  - np.min(img ))/np.ptp(img )
     img = np.clip(img * gain + bias, 0, 1)
