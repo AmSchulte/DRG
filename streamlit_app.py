@@ -5,7 +5,7 @@ import numpy as np
 from skimage.color import hsv2rgb
 
 
-path = '/examples/rats d7'    
+path = 'examples/rats d7'    
 
 condition = st.sidebar.selectbox('Condition', ["SNI", "sham"])
 
